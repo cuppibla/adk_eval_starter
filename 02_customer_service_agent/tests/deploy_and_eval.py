@@ -10,12 +10,12 @@ from vertexai.preview.evaluation import EvalTask, MetricPromptTemplateExamples
 PROJECT_ID = os.environ.get("PROJECT_ID")
 LOCATION = os.environ.get("LOCATION", "us-central1")
 STAGING_BUCKET = os.environ.get("STAGING_BUCKET") # Required for Agent Engine
-DATASET_PATH = "02_customer_service_agent/tests/golden_dataset.json"
+DATASET_PATH = "tests/golden_dataset.json"
 
 # --- IMPORT LOCAL AGENT ---
 # We load the local definition to send it to the Agent Engine
 try:
-    # Add the agent directory to sys.path to allow imports
+    # Add the current directory to sys.path to allow imports
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     from agent import root_agent as local_agent
 except ImportError as e:

@@ -15,7 +15,7 @@ steps:
         
         echo "🚀 Running Deployment & Evaluation Script..."
         # Pass the Staging Bucket env var specifically here
-        uv run 02_customer_service_agent/tests/deploy_and_eval.py
+        uv run tests/deploy_and_eval.py
     env:
       - 'PROJECT_ID=$_PROJECT_ID'
       - 'LOCATION=$_REGION'
@@ -29,5 +29,4 @@ timeout: 1200s
 substitutions:
   _PROJECT_ID: "your-project-id" # Fallback, should be overridden
   _REGION: "us-central1"
-  _REPO_NAME: "memory-agent-repo"
   _STAGING_BUCKET: "gs://your-staging-bucket-name" # UPDATE THIS!

@@ -1,0 +1,11 @@
+[project]
+name = "customer-service-agent"
+version = "0.1.0"
+description = "Customer Service Agent component"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "google-cloud-aiplatform[agent_engines,evaluation]",
+    "google-adk",
+    "python-dotenv",
+]
