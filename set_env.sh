@@ -1,7 +1,7 @@
 # --- Configuration ---
 PROJECT_FILE="~/project_id.txt"
 # This base name is for other workshops; Summoner's variables are defined below.
-export REPO_NAME="memory_agent"
+export REPO_NAME="customer_service_agent"
 # ---------------------
 
 
